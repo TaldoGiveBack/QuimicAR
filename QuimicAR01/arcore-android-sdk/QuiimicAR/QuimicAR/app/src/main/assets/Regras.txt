@@ -4,3 +4,36 @@
 * Manter o jogo protegido da umidade.
 * Deixá-lo longe de crianças abaixo de 8 anos (contém peças pequenas) . 
 * Este produto didático pode ser utilizado para jogar individualmente ou em grupos.
+
+
+
+
+Legenda dos elementos:
+* Preto: Carbono
+* Branco: Hidrogênio
+* Ciano: Ligações
+* Verde: Enxofre
+* Azul: Nitrogênio
+* Vermelho: Oxigênio
+
+
+
+
+Legenda da nomenclatura:
+* CirCULO: 1 carbono
+* Branco: Hidrogênio
+* Ciano: Ligações
+* Verde: Enxofre
+* Azul: Nitrogênio
+* Vermelho: Oxigênio
+
+
+
+
+Legenda da nomenclatura:
+* CirCULO: 1 carbono
+* Branco: Hidrogênio
+* Ciano: Ligações
+* Verde: Enxofre
+* Azul: Nitrogênio
+* Vermelho: Oxigênio
