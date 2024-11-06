@@ -77,10 +77,12 @@ public class AugmentedImageRenderer {
     float[] translationMatrix = new float[16];
     android.opengl.Matrix.setIdentityM(translationMatrix, 0);
 
-    float translationX = augmentedImageWidth/2;
-    float translationZ = augmentedImageHeight/3;
+    float translationX = augmentedImageWidth/-6f;
+    float translationZ = augmentedImageHeight/-6f;
 
-    android.opengl.Matrix.translateM(translationMatrix, 0, translationX, -0.4f, translationZ);
+    float offsetY = -0.4f;
+
+    android.opengl.Matrix.translateM(translationMatrix, 0, translationX, offsetY, translationZ);
 
     android.opengl.Matrix.multiplyMM(modelMatrix, 0, translationMatrix, 0, modelMatrix, 0);
 

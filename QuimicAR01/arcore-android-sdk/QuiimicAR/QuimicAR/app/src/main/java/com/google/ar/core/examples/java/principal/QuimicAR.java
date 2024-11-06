@@ -275,6 +275,7 @@ public class QuimicAR extends AppCompatActivity implements GLSurfaceView.Rendere
 
   @Override
   public void onDrawFrame(GL10 gl) {
+
     // Clear screen to notify driver it should not load any pixels from previous frame.
     GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
@@ -293,6 +294,7 @@ public class QuimicAR extends AppCompatActivity implements GLSurfaceView.Rendere
       // camera framerate.
       Frame frame = session.update();
       Camera camera = frame.getCamera();
+
 
       // Keep the screen unlocked while tracking, but allow it to lock when tracking stops.
       trackingStateHelper.updateKeepScreenOnFlag(camera.getTrackingState());
@@ -342,6 +344,7 @@ public class QuimicAR extends AppCompatActivity implements GLSurfaceView.Rendere
           // but not yet tracked.
           String text = "Imagem "+ augmentedImage.getIndex()+ " detectada";
           messageSnackbarHelper.showMessage(this, text);
+          session.getConfig().setAugmentedImageDatabase(null);
           break;
 
         case TRACKING:
@@ -402,7 +405,7 @@ public class QuimicAR extends AppCompatActivity implements GLSurfaceView.Rendere
       }
 
       augmentedImageDatabase = new AugmentedImageDatabase(session);
-      augmentedImageDatabase.addImage("image_name", augmentedImageBitmap);
+      augmentedImageDatabase.addImage("image_name", augmentedImageBitmap,0.4f);
       // If the physical size of the image is known, you can instead use:
       //     augmentedImageDatabase.addImage("image_name", augmentedImageBitmap, widthInMeters);
       // This will improve the initial detection speed. ARCore will still actively estimate the
