@@ -1,0 +1,5 @@
+000.jpg|C:\Users\Maker-05\AndroidStudioProjects\QuimicAR01\arcore-android-sdk\media\augmented_image_database/000.jpg
+001.jpg|C:\Users\Maker-05\AndroidStudioProjects\QuimicAR01\arcore-android-sdk\media\augmented_image_database/001.jpg
+002.jpg|C:\Users\Maker-05\AndroidStudioProjects\QuimicAR01\arcore-android-sdk\media\augmented_image_database/002.jpg
+003.jpg|C:\Users\Maker-05\AndroidStudioProjects\QuimicAR01\arcore-android-sdk\media\augmented_image_database/003.jpg
+009.jpg|C:\Users\Maker-05\AndroidStudioProjects\QuimicAR01\arcore-android-sdk\media\augmented_image_database/009.jpg
