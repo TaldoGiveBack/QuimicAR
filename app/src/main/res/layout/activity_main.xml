@@ -38,6 +38,11 @@
       android:scaleType="fitCenter"
       />
 
+  <WebView
+      android:id="@+id/jsmolWebView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
   <Button
       android:id="@+id/Boton"
       android:layout_width="124dp"
