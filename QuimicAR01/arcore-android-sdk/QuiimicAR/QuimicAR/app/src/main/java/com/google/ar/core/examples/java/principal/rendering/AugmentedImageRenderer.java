@@ -60,42 +60,61 @@ public class AugmentedImageRenderer {
           AugmentedImage augmentedImage,
           Anchor centerAnchor,
           float[] colorCorrectionRgba) {
-    float[] tintColor =
-            convertHexToColor(TINT_COLORS_HEX[augmentedImage.getIndex() % TINT_COLORS_HEX.length]);
-    float scaleFactor = 0.25f;
 
+    // Convertendo o índice da imagem para uma cor de tintura
+    float[] tintColor = convertHexToColor(TINT_COLORS_HEX[augmentedImage.getIndex() % TINT_COLORS_HEX.length]);
 
+    // Fator de escala do objeto 3D
+    float scaleFactor = 0.25f;  // Você pode ajustar esse valor dependendo do tamanho da imagem e do modelo
 
+    // Obtendo a posição da âncora da imagem no espaço 3D
     Pose anchorPose = centerAnchor.getPose();
 
+    // Pegando as dimensões da imagem aumentada no mundo real
     float augmentedImageWidth = augmentedImage.getExtentX();
     float augmentedImageHeight = augmentedImage.getExtentZ();
 
+    // Criando uma matriz de transformação para o objeto 3D
     float[] modelMatrix = new float[16];
     anchorPose.toMatrix(modelMatrix, 0);
 
+    // Criando uma matriz de translação para mover o objeto
     float[] translationMatrix = new float[16];
     android.opengl.Matrix.setIdentityM(translationMatrix, 0);
 
-    float translationX = augmentedImageWidth/-6f;
-    float translationZ = augmentedImageHeight/-6f;
+    // Ajustando a posição para centralizar o objeto na imagem aumentada
+    // Vamos mover o objeto para o centro da imagem no espaço 3D
 
-    float offsetY = -0.4f;
+    // A posição do centro da imagem aumentada no eixo X e Z
+    // Para centralizar o objeto, vamos mover metade da largura e da altura
+    float translationX = 0.0f; // Para centralizar no eixo X
+    float translationZ = 0.0f; // Para centralizar no eixo Z
+    float offsetY = -0.4f;     // Ajuste no eixo Y, se necessário
 
+    // Aplica a translação (estamos utilizando 0.0f para X e Z para centralizar o objeto)
     android.opengl.Matrix.translateM(translationMatrix, 0, translationX, offsetY, translationZ);
 
+    // Multiplica a matriz de translação com a matriz do modelo
     android.opengl.Matrix.multiplyMM(modelMatrix, 0, translationMatrix, 0, modelMatrix, 0);
 
+    // Criando uma matriz de escala para o objeto 3D
     float[] scaleMatrix = new float[16];
     android.opengl.Matrix.setIdentityM(scaleMatrix, 0);
     android.opengl.Matrix.scaleM(scaleMatrix, 0, scaleFactor, scaleFactor, scaleFactor);
+
+    // Multiplica a matriz de escala com a matriz do modelo
     android.opengl.Matrix.multiplyMM(modelMatrix, 0, scaleMatrix, 0, modelMatrix, 0);
 
+    // Atualiza a matriz do modelo com a transformação calculada
     molecule.updateModelMatrix(modelMatrix, scaleFactor);
 
-
+    // Desenha o objeto 3D
     molecule.draw(viewMatrix, projectionMatrix, colorCorrectionRgba, tintColor);
   }
+
+
+
+
   private static float[] convertHexToColor(int colorHex) {
     // colorHex is in 0xRRGGBB format
     float red = ((colorHex & 0xFF0000) >> 16) / 255.0f * TINT_INTENSITY;
