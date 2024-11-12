@@ -6,11 +6,11 @@ All the rights reserved
 This application utilizes ARCore SDK from Google to scan physical-assembled pieces and render their respective compound tridimensional geometry.
 
 
-# It's objective is to be a teaching tool that makes learning more acessible and interactive.
+## It's objective is to be a teaching tool that makes learning more acessible and interactive.
 
 
 ## Quick Start
-Veja o [Guia rápido do Android Studio](//developer.android.com/studio/intro?hl=pt-br) e o [Guia rápido do ARCore SDK](//developers.google.com/ar/develop/java/quickstart?hl=es-419).
+See the [Android Studio quickstart guide](//developer.android.com/studio/intro?hl=pt-br) and the [ARCore SDK quickstart guide](//developers.google.com/ar/develop/java/quickstart).
 
 
 ## API Reference
@@ -20,7 +20,7 @@ or [ARCore SDK for C API Reference](//developers.google.com/ar/reference/c).
 
 
 ## Terms & Conditions
-Ao baixar o QuimicAR, você concorda que o [**ARCore Additional Terms of Service**](https://developers.google.com/ar/develop/terms) que rede o seu uso.
+When downloading QuimicAR, you agree with [**ARCore Additional Terms of Service**](https://developers.google.com/ar/develop/terms) that governs it's usability.
 
 
 ## User privacy requirements
