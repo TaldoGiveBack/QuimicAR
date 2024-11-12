@@ -1,34 +1,16 @@
-ARCore SDK for Android
+QuimicAR
 ======================
-Copyright 2017 Google LLC
+Copyright 2024 Amanda Rost and Give Back
+All the rights reserved
 
-This SDK provides APIs for all of the essential AR features like motion
-tracking, environmental understanding, and light estimation. With these
-capabilities you can build entirely new AR experiences or enhance existing apps
-with AR features.
+This application utilizes ARCore SDK from Google to scan physical-assembled pieces and render their respective compound tridimensional geometry.
 
 
-## Breaking change affecting previously published 32-bit-only apps
-
-_Google Play Services for AR_ (ARCore) has removed support for 32-bit-only
-ARCore-enabled apps running on 64-bit devices. Support for 32-bit apps running
-on 32-bit devices is unaffected.
-
-If you have published a 32-bit-only (`armeabi-v7a`) version of your
-ARCore-enabled app without publishing a corresponding 64-bit (`arm64-v8a`)
-version, you must update your app to include 64-bit native libraries.
-32-bit-only ARCore-enabled apps that are not updated by this time may crash when
-attempting to start an augmented reality (AR) session.
-
-To learn more about this breaking change, and for instructions on how to update
-your app, see https://developers.google.com/ar/64bit.
+# It's objective is to be a teaching tool that makes learning more acessible and interactive.
 
 
 ## Quick Start
-
-See the [Quickstart for Android Java](//developers.google.com/ar/develop/java/quickstart)
-or [Quickstart for Android NDK](//developers.google.com/ar/develop/c/quickstart)
-developer guide.
+Veja o [Guia rápido do Android Studio](//developer.android.com/studio/intro?hl=pt-br) e o [Guia rápido do ARCore SDK](//developers.google.com/ar/develop/java/quickstart?hl=es-419).
 
 
 ## API Reference
@@ -37,17 +19,8 @@ See the [ARCore SDK for Java API Reference](//developers.google.com/ar/reference
 or [ARCore SDK for C API Reference](//developers.google.com/ar/reference/c).
 
 
-## Release Notes
-
-The SDK release notes are available on the
-[releases](//github.com/google-ar/arcore-android-sdk/releases) page.
-
-
 ## Terms & Conditions
-
-By downloading the ARCore SDK for Android, you agree that the
-[**ARCore Additional Terms of Service**](https://developers.google.com/ar/develop/terms)
-governs your use thereof.
+Ao baixar o QuimicAR, você concorda que o [**ARCore Additional Terms of Service**](https://developers.google.com/ar/develop/terms) que rede o seu uso.
 
 
 ## User privacy requirements
@@ -59,6 +32,7 @@ notice screen: "This application runs on [Google Play Services for AR](//play.go
 which is provided by Google LLC and governed by the [Google Privacy Policy](//policies.google.com/privacy)".
 
 See the [User privacy requirements](https://developers.google.com/ar/develop/privacy-requirements).
+
 
 ## Deprecation policy
 
